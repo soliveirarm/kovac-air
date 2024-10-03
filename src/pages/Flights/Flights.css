@@ -1,0 +1,9 @@
+.airline-name {
+  text-transform: capitalize;
+}
+
+.flight-price {
+  color: var(--ion-color-success);
+  font-size: 1.5rem;
+  font-weight: 500;
+}

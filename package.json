@@ -25,10 +25,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^5.3.4",
-    "react-router-dom": "^5.3.4"
+    "react-router-dom": "^5.3.4",
+    "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
     "@capacitor/cli": "6.1.2",
+    "@faker-js/faker": "^9.0.3",
     "@testing-library/dom": ">=7.21.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",

@@ -11,7 +11,7 @@ import {
 } from "@ionic/react"
 import { IonReactRouter } from "@ionic/react-router"
 import { airplaneOutline, giftOutline, cubeOutline } from "ionicons/icons"
-import Flights from "./pages/Flights"
+import Flights from "./pages/Flights/Flights"
 import Dreams from "./pages/Dreams"
 import YourPackages from "./pages/YourPackages"
 
