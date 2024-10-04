@@ -1,0 +1,7 @@
+.dream__airport {
+  text-transform: capitalize;
+}
+
+.dream__thumbnail {
+  --border-radius: 0.5rem;
+}

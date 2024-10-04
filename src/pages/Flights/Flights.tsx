@@ -5,22 +5,17 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react"
-import Flight from "../../components/Flight"
+import Flight from "../../components/Flight/Flight"
 import "./Flights.css"
+import { FlightProps } from "../../types"
 
-import { FlightProps } from "../../types/flight-props"
-import { useLocalStorage } from "usehooks-ts"
-import { useEffect } from "react"
-import { flightsMock } from "./flight-generator"
+type FlightsProps = {
+  flights: FlightProps[]
+  addToDreams: (i: number) => void
+  buy: (i: number) => void
+}
 
-export default function Flights() {
-  // Array vazio que receverá voos aleatórios
-  const [flights, setFlights] = useLocalStorage<FlightProps[]>("flights", [])
-
-  useEffect(() => {
-    if (flights.length === 0) setFlights(flightsMock)
-  }, [])
-
+export default function Flights({ flights, addToDreams, buy }: FlightsProps) {
   return (
     <IonPage>
       <IonHeader>
@@ -36,7 +31,12 @@ export default function Flights() {
         </IonHeader>
         <IonContent>
           {flights.map((flight, i) => (
-            <Flight key={i} {...flight} />
+            <Flight
+              key={i}
+              {...flight}
+              addToDreams={() => addToDreams(i)}
+              buy={() => buy(i)}
+            />
           ))}
         </IonContent>
       </IonContent>
